@@ -2,22 +2,20 @@
 
 set -e
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-
 echo "Starting system setup..."
 
-bash "$ROOT_DIR/scripts/install-base.sh"
+bash /scripts/install-base.sh
 
-bash "$ROOT_DIR/brew/install-brew.sh"
+bash brew/install-brew.sh
 
-bash "$ROOT_DIR/scripts/install-zsh.sh"
+bash scripts/install-zsh.sh
 
-bash "$ROOT_DIR/scripts/install-tools.sh"
+bash scripts/install-tools.sh
 
-bash "$ROOT_DIR/git/setup-git.sh"
+bash git/setup-git.sh
 
-bash "$ROOT_DIR/scripts/install-ssh.sh"
+bash scripts/install-ssh.sh
 
-bash "$ROOT_DIR/scripts/install-languages.sh"
+bash scripts/install-languages.sh
 
-echo "Setup completed successfully!"
+echo "Setup completed successfully!
