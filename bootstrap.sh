@@ -2,20 +2,14 @@
 
 set -e
 
-echo "Starting system setup..."
+REPO_URL="https://github.com/alejaquant/backup-config.git"
+INSTALL_DIR="$HOME/.setup-temp"
 
-bash /scripts/install-base.sh
+echo "Cloning repository..."
 
-bash brew/install-brew.sh
+rm -rf "$INSTALL_DIR"
+git clone "$REPO_URL" "$INSTALL_DIR"
 
-bash scripts/install-zsh.sh
+cd "$INSTALL_DIR"
 
-bash scripts/install-tools.sh
-
-bash git/setup-git.sh
-
-bash scripts/install-ssh.sh
-
-bash scripts/install-languages.sh
-
-echo "Setup completed successfully!
+bash bootstrap-local.sh
