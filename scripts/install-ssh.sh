@@ -4,9 +4,11 @@ set -e
 
 echo "Generating SSH key..."
 
-read -p "Enter your GitHub email: " email
+#read -p "Enter your GitHub email: " email
 
-ssh-keygen -t ed25519 -C "$email"
+#ssh-keygen -t ed25519 -C "$email"
+
+ssh-keygen -t ed25519 -C "alejquant@gmail.com"
 
 echo "Starting ssh-agent..."
 
