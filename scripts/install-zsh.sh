@@ -15,6 +15,10 @@ echo "Installing Powerlevel10k..."
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
 ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-echo "Setting zsh as default shell..."
+echo "Setting zsh as default shell via .bashrc..."
 
-chsh -s $(which zsh)
+echo 'exec zsh' >> ~/.bashrc
+
+echo "Starting zsh..."
+
+zsh
