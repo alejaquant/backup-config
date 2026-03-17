@@ -4,8 +4,7 @@ set -e
 
 echo "Starting system setup..."
 
-bash /scripts/install-base.sh
-
+bash scripts/install-base.sh
 bash brew/install-brew.sh
 bash scripts/install-zsh.sh
 bash scripts/install-tools.sh
